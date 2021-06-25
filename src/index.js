@@ -136,6 +136,7 @@ const deleteItem = function(e) {
             }
         }
         del.removeChild(delButton)
+        del.removeChild(cancelButton)
         del.removeChild(p)
         document.querySelector(".overlay").classList.remove("show");
         del = document.querySelector('#del').style.display = "none";
