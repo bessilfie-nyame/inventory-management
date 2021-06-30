@@ -5,85 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/styles.css">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
-
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Inventory Management</title>
 </head>
 
 <body>
     <div id="container">
-        <h1> Inventory App </h1>
-        <div class="overlay"></div>
-        <button id="add" class="add-btn">Add</button>
-        <div id="del">
-            <h1 style="line-height: 5px; font-size: 20px; color: rgb(14, 9, 9);">Item to Delete</h1>
-
+        <div class="side">
+            <div class="overlay"></div>
+            <div style="display: flex;"><button id="add" class="add-btn">Add <span>|</span></button>
+            <h2 style="margin: auto; margin-left: 20rem; color: white;">Dashboard</h2>
+            </div>
+            <div id="del">
+                <h1 style="line-height: 5px; font-size: 20px; color: rgb(14, 9, 9);">Item to Delete</h1>
+            </div>
         </div>
-        <div style="display: flex; text-align: center;">
-            <div style="height: 130px; width: 100px; background-color: purple; margin: 20px; width: 200px;" ><p style="color: white;">Total number of Categories: 5</p></div>
-            <div style="height: 130px; width: 100px; background-color: blue;margin: 20px; width: 200px;"><p id="total" style="color: white;"></p></div>
-            <div style="height: 130px; width: 100px; background-color: green; margin: 20px; width: 200px;"><p id="instk" style="color: white;"></p></div>
-            <div style="height: 130px; width: 100px; background-color: orangered; margin: 20px; width: 200px;"><p id="almstk" style="color: white;"></p></div>
-            <div style="height: 130px; width: 100px; background-color: red; margin: 20px; width: 200px;"><p id="outstk" style="color: white;"></p></div>
-        </div>
+        <div>       
+            <!-- <h1> Inventory App </h1> -->
+            <!-- <div class="overlay"></div>
+            <button id="add" class="add-btn">Add</button>
+            <div id="del">
+                <h1 style="line-height: 5px; font-size: 20px; color: rgb(14, 9, 9);">Item to Delete</h1>
 
-        <div id="inputs-list" class="grid1">
-
-
-            <div>
-                <form action="" id="myForm">
-                    <input id="input1" placeholder="Item " type="text" required> </div>
-
-            <div>
-                <input id="input2" placeholder="Quantity" type="text" required> </div>
-
-            <div>
-                <label>Category</label>
-                <select name="cars" id="cars">
-                    <option value="" disabled selected hidden>Select Model</option>
-                    <option value="volvo">Volvo</option>
-                    <option value="audi">Audi</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="ford">Ford</option>
-                </select>
-                <!-- <input id="input3" placeholder="Category" type="number" required> -->
+            </div> -->
+            <div style="height: 15rem; display: flex; text-align: center; background-image: url(./src/quantity.png); padding: 70px 0 0 70px;">
+                <div class="set-opacity" style="height: 130px; width: 100px; background-color: purple; margin: 20px; width: 200px;" ><p class="summary-font" style="color: white;">Total number of Categories: 5</p></div>
+                <div class="set-opacity" style="height: 130px; width: 100px; background-color: blue;margin: 20px; width: 200px;"><p class="summary-font" id="total" style="color: white;"></p></div>
+                <div class="set-opacity" style="height: 130px; width: 100px; background-color: green; margin: 20px; width: 200px;"><p class="summary-font" id="instk" style="color: white;"></p></div>
+                <div class="set-opacity" style="height: 130px; width: 100px; background-color: orangered; margin: 20px; width: 200px;"><p class="summary-font" id="almstk" style="color: white;"></p></div>
+                <div class="set-opacity" style="height: 130px; width: 100px; background-color: red; margin: 20px; width: 200px;"><p class="summary-font" id="outstk" style="color: white;"></p></div>
             </div>
 
-            <div>
-                <input id="input3" placeholder="Description" type="text" required>
-                </form>
+            <div id="inputs-list" >
+
+
+                <div>
+                    <form action="" id="myForm">
+                        <input id="input1" placeholder="name " type="text" required> </div>
+
+                <div>
+                    <input id="input2" placeholder="quantity" type="text" required> </div>
+
+                <div>
+                    <select name="cars" id="cars">
+                        <option value="" disabled selected hidden>Select Model</option>
+                        <option value="volvo">Volvo</option>
+                        <option value="audi">Audi</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="ford">Ford</option>
+                    </select>
+                    <!-- <input id="input3" placeholder="Category" type="number" required> -->
+                </div>
+
+                <div>
+                    <input id="input3" placeholder="description" type="text" required>
+                    </form>
+                </div>
+
+
+                <div style="display: flex">
+                    <button id='submit' class="fa-list-alt"> Add </button>
+                    <button id='cancel' class="fa-list-alt"> Cancel </button>
+                </div>
+
+
             </div>
 
+            <!-- heading for div table  -->
+            <div id='gridH'>
+                <div>name</div>
+                <div>quantity</div>
+                <div>category</div>
+                <div>description</div>
+                <div>date</div>
+                <div>options</div>
+            </div>
+            <!-- contents in the div table -->
+            <div id='grid'>
 
-            <div style="display: flex">
-                <button id='submit' class="fa-list-alt"> Add </button>
-                <button id='cancel' class="fa-list-alt"> Cancel </button>
+
+
+
+
             </div>
 
-
         </div>
-
-<!-- heading for div table  -->
-        <div id='gridH'>
-            <div>item</div>
-            <div>quantity</div>
-            <div>category</div>
-            <div>description</div>
-            <div>date</div>
-            <div>options</div>
-        </div>
-<!-- contents in the div table -->
-        <div id='grid'>
-
-
-
-
-
-        </div>
-
-
     </div>
 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
